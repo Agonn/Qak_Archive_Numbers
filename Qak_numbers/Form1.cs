@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Qak_numbers
 {
-    public partial class Form1 : Form
+    public partial class Form : System.Windows.Forms.Form
     {
-        public Form1()
+        public Form()
         {
             InitializeComponent();
         }
@@ -72,6 +72,11 @@ namespace Qak_numbers
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(memoryImage, 0, 0);
+        }
+
+        private void Form_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
