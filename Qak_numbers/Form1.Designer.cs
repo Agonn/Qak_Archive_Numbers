@@ -136,6 +136,8 @@
             this.materialDivider60 = new MaterialSkin.Controls.MaterialDivider();
             this.nr_rendor5 = new System.Windows.Forms.Label();
             this.nUD = new System.Windows.Forms.NumericUpDown();
+            this.PreviewPrint = new System.Windows.Forms.PrintPreviewDialog();
+            this.btnPreview = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -1258,6 +1260,26 @@
             0});
             this.nUD.ValueChanged += new System.EventHandler(this.nUD_ValueChanged);
             // 
+            // PreviewPrint
+            // 
+            this.PreviewPrint.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.PreviewPrint.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.PreviewPrint.ClientSize = new System.Drawing.Size(400, 300);
+            this.PreviewPrint.Enabled = true;
+            this.PreviewPrint.Icon = ((System.Drawing.Icon)(resources.GetObject("PreviewPrint.Icon")));
+            this.PreviewPrint.Name = "printPreviewDialog1";
+            this.PreviewPrint.Visible = false;
+            // 
+            // btnPreview
+            // 
+            this.btnPreview.Location = new System.Drawing.Point(330, 66);
+            this.btnPreview.Name = "btnPreview";
+            this.btnPreview.Size = new System.Drawing.Size(75, 23);
+            this.btnPreview.TabIndex = 9;
+            this.btnPreview.Text = "Preview";
+            this.btnPreview.UseVisualStyleBackColor = true;
+            this.btnPreview.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form
             // 
             this.AcceptButton = this.btnNumri;
@@ -1265,6 +1287,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(949, 607);
+            this.Controls.Add(this.btnPreview);
             this.Controls.Add(this.nUD);
             this.Controls.Add(this.nr_rendor5);
             this.Controls.Add(this.materialDivider60);
@@ -1494,6 +1517,8 @@
         private MaterialSkin.Controls.MaterialDivider materialDivider60;
         private System.Windows.Forms.Label nr_rendor5;
         private System.Windows.Forms.NumericUpDown nUD;
+        private System.Windows.Forms.PrintPreviewDialog PreviewPrint;
+        private System.Windows.Forms.Button btnPreview;
     }
 }
 

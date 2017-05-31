@@ -70,6 +70,7 @@ namespace Qak_numbers
         {
             CaptureScreen();
             printDocument1.Print();
+           
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -85,6 +86,16 @@ namespace Qak_numbers
         private void nUD_ValueChanged(object sender, EventArgs e)
         {
             txtNumrat.Text = nUD.Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CaptureScreen();
+            PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog();
+            printPreviewDialog1.Document = this.printDocument1;
+            printPreviewDialog1.FormBorderStyle = FormBorderStyle.Fixed3D;
+            printPreviewDialog1.SetBounds(20, 20, this.Width, this.Height);
+            printPreviewDialog1.ShowDialog();
         }
     }
 }
