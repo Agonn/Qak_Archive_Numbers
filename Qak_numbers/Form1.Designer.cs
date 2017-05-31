@@ -135,11 +135,13 @@
             this.materialDivider59 = new MaterialSkin.Controls.MaterialDivider();
             this.materialDivider60 = new MaterialSkin.Controls.MaterialDivider();
             this.nr_rendor5 = new System.Windows.Forms.Label();
+            this.nUD = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUD)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNumri
@@ -1233,6 +1235,29 @@
             this.nr_rendor5.TabIndex = 7;
             this.nr_rendor5.Text = "140";
             // 
+            // nUD
+            // 
+            this.nUD.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nUD.Location = new System.Drawing.Point(167, 17);
+            this.nUD.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.nUD.Name = "nUD";
+            this.nUD.Size = new System.Drawing.Size(120, 20);
+            this.nUD.TabIndex = 8;
+            this.nUD.Value = new decimal(new int[] {
+            14001,
+            0,
+            0,
+            0});
+            this.nUD.ValueChanged += new System.EventHandler(this.nUD_ValueChanged);
+            // 
             // Form
             // 
             this.AcceptButton = this.btnNumri;
@@ -1240,6 +1265,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(949, 607);
+            this.Controls.Add(this.nUD);
             this.Controls.Add(this.nr_rendor5);
             this.Controls.Add(this.materialDivider60);
             this.Controls.Add(this.materialDivider48);
@@ -1354,6 +1380,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1466,6 +1493,7 @@
         private MaterialSkin.Controls.MaterialDivider materialDivider59;
         private MaterialSkin.Controls.MaterialDivider materialDivider60;
         private System.Windows.Forms.Label nr_rendor5;
+        private System.Windows.Forms.NumericUpDown nUD;
     }
 }
 

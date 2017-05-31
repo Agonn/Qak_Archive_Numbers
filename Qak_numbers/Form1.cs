@@ -19,9 +19,14 @@ namespace Qak_numbers
 
         private void btnNumri_Click(object sender, EventArgs e)
         {
+
+
+
             int numri_pare = Convert.ToInt32(txtNumrat.Text);
             int numri_dyte = Convert.ToInt32(txtRendor.Text);
             int numri_tret = Convert.ToInt32(txt_viti_.Text);
+            int final_numri = numri_pare / 100 + 1;
+            txtRendor.Text = final_numri.ToString();
             //e Para
             lbl_nr1.Text = numri_pare.ToString();
             lbl_nr2.Text = (numri_pare + 99).ToString();
@@ -50,8 +55,6 @@ namespace Qak_numbers
 
 
 
-
-
         }
         Bitmap memoryImage;
 
@@ -77,6 +80,11 @@ namespace Qak_numbers
         private void Form_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void nUD_ValueChanged(object sender, EventArgs e)
+        {
+            txtNumrat.Text = nUD.Value.ToString();
         }
     }
 }
