@@ -1272,7 +1272,7 @@
             // 
             // btnPreview
             // 
-            this.btnPreview.Location = new System.Drawing.Point(330, 66);
+            this.btnPreview.Location = new System.Drawing.Point(332, 66);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.Size = new System.Drawing.Size(75, 23);
             this.btnPreview.TabIndex = 9;
