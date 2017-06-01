@@ -138,17 +138,19 @@
             this.nUD = new System.Windows.Forms.NumericUpDown();
             this.PreviewPrint = new System.Windows.Forms.PrintPreviewDialog();
             this.btnPreview = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUD)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNumri
             // 
-            this.btnNumri.Location = new System.Drawing.Point(167, 66);
+            this.btnNumri.Location = new System.Drawing.Point(175, 63);
             this.btnNumri.Name = "btnNumri";
             this.btnNumri.Size = new System.Drawing.Size(75, 23);
             this.btnNumri.TabIndex = 3;
@@ -158,7 +160,7 @@
             // 
             // txtNumrat
             // 
-            this.txtNumrat.Location = new System.Drawing.Point(52, 16);
+            this.txtNumrat.Location = new System.Drawing.Point(60, 13);
             this.txtNumrat.Name = "txtNumrat";
             this.txtNumrat.Size = new System.Drawing.Size(100, 20);
             this.txtNumrat.TabIndex = 0;
@@ -226,7 +228,7 @@
             // 
             // txtRendor
             // 
-            this.txtRendor.Location = new System.Drawing.Point(52, 42);
+            this.txtRendor.Location = new System.Drawing.Point(60, 39);
             this.txtRendor.Name = "txtRendor";
             this.txtRendor.Size = new System.Drawing.Size(100, 20);
             this.txtRendor.TabIndex = 1;
@@ -235,7 +237,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 16);
+            this.label3.Location = new System.Drawing.Point(3, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(21, 13);
             this.label3.TabIndex = 3;
@@ -244,7 +246,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 42);
+            this.label4.Location = new System.Drawing.Point(3, 39);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 3;
@@ -252,7 +254,7 @@
             // 
             // txt_viti_
             // 
-            this.txt_viti_.Location = new System.Drawing.Point(52, 68);
+            this.txt_viti_.Location = new System.Drawing.Point(60, 65);
             this.txt_viti_.Name = "txt_viti_";
             this.txt_viti_.Size = new System.Drawing.Size(100, 20);
             this.txt_viti_.TabIndex = 2;
@@ -261,7 +263,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 68);
+            this.label5.Location = new System.Drawing.Point(3, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(24, 13);
             this.label5.TabIndex = 3;
@@ -269,7 +271,7 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(248, 66);
+            this.btnPrint.Location = new System.Drawing.Point(256, 63);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(75, 23);
             this.btnPrint.TabIndex = 4;
@@ -1244,7 +1246,7 @@
             0,
             0,
             0});
-            this.nUD.Location = new System.Drawing.Point(167, 17);
+            this.nUD.Location = new System.Drawing.Point(175, 14);
             this.nUD.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -1272,7 +1274,7 @@
             // 
             // btnPreview
             // 
-            this.btnPreview.Location = new System.Drawing.Point(332, 66);
+            this.btnPreview.Location = new System.Drawing.Point(340, 63);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.Size = new System.Drawing.Size(75, 23);
             this.btnPreview.TabIndex = 9;
@@ -1280,15 +1282,31 @@
             this.btnPreview.UseVisualStyleBackColor = true;
             this.btnPreview.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.btnPreview);
+            this.panel1.Controls.Add(this.btnNumri);
+            this.panel1.Controls.Add(this.nUD);
+            this.panel1.Controls.Add(this.txtNumrat);
+            this.panel1.Controls.Add(this.txtRendor);
+            this.panel1.Controls.Add(this.txt_viti_);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.btnPrint);
+            this.panel1.Location = new System.Drawing.Point(50, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(418, 100);
+            this.panel1.TabIndex = 10;
+            // 
             // Form
             // 
             this.AcceptButton = this.btnNumri;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(949, 607);
-            this.Controls.Add(this.btnPreview);
-            this.Controls.Add(this.nUD);
+            this.ClientSize = new System.Drawing.Size(791, 607);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.nr_rendor5);
             this.Controls.Add(this.materialDivider60);
             this.Controls.Add(this.materialDivider48);
@@ -1351,16 +1369,12 @@
             this.Controls.Add(this.materialDivider2);
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.lbl_viti4);
-            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.lbl_viti3);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.lbl_viti2);
             this.Controls.Add(this.nr_rendor7);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.lbl_viti1);
             this.Controls.Add(this.nr_rendor3);
             this.Controls.Add(this.lbl_nr10);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.lbl_nr8);
             this.Controls.Add(this.nr_rendor2);
             this.Controls.Add(this.lbl_nr6);
@@ -1384,13 +1398,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.txt_viti_);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.txtRendor);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.txtNumrat);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.btnNumri);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -1404,6 +1414,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUD)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1519,6 +1531,7 @@
         private System.Windows.Forms.NumericUpDown nUD;
         private System.Windows.Forms.PrintPreviewDialog PreviewPrint;
         private System.Windows.Forms.Button btnPreview;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

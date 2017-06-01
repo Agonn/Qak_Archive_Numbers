@@ -96,6 +96,7 @@ namespace Qak_numbers
             printPreviewDialog1.FormBorderStyle = FormBorderStyle.Fixed3D;
             printPreviewDialog1.SetBounds(20, 20, this.Width, this.Height);
             printPreviewDialog1.ShowDialog();
+           
         }
     }
 }
