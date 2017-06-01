@@ -19,9 +19,6 @@ namespace Qak_numbers
 
         private void btnNumri_Click(object sender, EventArgs e)
         {
-
-
-
             int numri_pare = Convert.ToInt32(txtNumrat.Text);
             int numri_dyte = Convert.ToInt32(txtRendor.Text);
             int numri_tret = Convert.ToInt32(txt_viti_.Text);
@@ -52,10 +49,8 @@ namespace Qak_numbers
             lbl_nr10.Text = (numri_pare + 499).ToString();
             nr_rendor7.Text = (numri_dyte + 4).ToString();
             lbl_viti4.Text = numri_tret.ToString() + "/A";
-
-
-
         }
+
         Bitmap memoryImage;
 
         private void CaptureScreen()
@@ -64,13 +59,13 @@ namespace Qak_numbers
             Size s = this.Size;
             memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
             Graphics memoryGraphics = Graphics.FromImage(memoryImage);
-            memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
+            memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, -130, s);
         }
+
         private void btnPrint_Click(object sender, EventArgs e)
         {
             CaptureScreen();
             printDocument1.Print();
-           
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
